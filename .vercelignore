@@ -1,0 +1,11 @@
+# Vercel ignore file
+README.md
+PORTFOLIO_TRANSFORMATION.md
+BACKGROUND_ELEMENTS_AND_CHATBOT.md
+.git
+.gitignore
+.next
+node_modules
+.env.local
+.vscode
+*.log

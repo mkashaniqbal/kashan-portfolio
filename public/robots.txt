@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://muhammadkashan.dev/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block common bot traps (if any)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+
+# Allow Google
+User-agent: Googlebot
+Allow: /
+
+# Allow Bing
+User-agent: Bingbot
+Allow: /
+
+# Allow Yandex
+User-agent: YandexBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
