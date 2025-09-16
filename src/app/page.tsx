@@ -664,15 +664,18 @@ export default function Home() {
                 Utilizing cutting-edge tools and frameworks to deliver exceptional results
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Automatic Logo Slider */}
-            <div className="relative overflow-hidden">
-              {/* Fade overlays for smooth appearance */}
-              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#0f0f23] via-[#0f0f23]/80 to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#0f0f23] via-[#0f0f23]/80 to-transparent z-10"></div>
+      {/* Full Width Logo Slider */}
+      <div className="relative overflow-hidden w-full bg-transparent">
+        {/* Fade overlays for smooth appearance */}
+        <div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-[#0f0f23] via-[#1a1a2e]/90 via-[#16213e]/70 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-[#0f0f23] via-[#1a1a2e]/90 via-[#16213e]/70 to-transparent z-10"></div>
 
-              {/* Slider Container */}
-              <div className="flex animate-infinite-scroll space-x-8 py-8">
+        {/* Slider Container */}
+        <div className="flex animate-infinite-scroll space-x-8 py-12">
                 {/* First set of logos */}
                 {[
                   { name: 'React', icon: '⚛️', color: 'from-blue-400 to-cyan-400' },
@@ -692,7 +695,7 @@ export default function Home() {
                     key={`first-${index}`}
                     className="flex-shrink-0 group relative"
                   >
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 min-w-[120px] hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
+                    <div className="bg-white/3 backdrop-blur-sm border border-white/5 rounded-xl p-6 min-w-[120px] hover:border-white/15 hover:bg-white/8 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
                       {/* Gradient background on hover */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}></div>
                       <div className="relative z-10">
@@ -724,7 +727,7 @@ export default function Home() {
                     key={`second-${index}`}
                     className="flex-shrink-0 group relative"
                   >
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 min-w-[120px] hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
+                    <div className="bg-white/3 backdrop-blur-sm border border-white/5 rounded-xl p-6 min-w-[120px] hover:border-white/15 hover:bg-white/8 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
                       {/* Gradient background on hover */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}></div>
                       <div className="relative z-10">
@@ -736,11 +739,8 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* Testimonials Section */}
       <section id="testimonials" ref={testimonialsRef} className="reveal-section py-32 bg-white/[0.02]">
