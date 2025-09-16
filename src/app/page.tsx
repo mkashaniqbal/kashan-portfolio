@@ -440,10 +440,14 @@ export default function Home() {
 
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                  <button className="group bg-white text-black px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3">
+                  <a
+                    href="/CV.pdf"
+                    download="Muhammad_Kashan_CV.pdf"
+                    className="group bg-white text-black px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                  >
                     <Download size={20} />
                     Download CV
-                  </button>
+                  </a>
                   <div className="flex items-center gap-4 text-sm text-gray-400">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
@@ -650,12 +654,43 @@ export default function Home() {
             ))}
           </div>
 
-          {/* View All Projects CTA */}
-          <div className="text-center mt-16">
-            <button className="group bg-white text-black px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 flex items-center justify-center gap-3 mx-auto">
-              View All Projects
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+          {/* Tech Stack Showcase */}
+          <div className="mt-20 pt-16 border-t border-white/10">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                Built with Modern Technologies
+              </h3>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Utilizing cutting-edge tools and frameworks to deliver exceptional results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {[
+                { name: 'React', icon: '⚛️' },
+                { name: 'TypeScript', icon: '📘' },
+                { name: 'Next.js', icon: '▲' },
+                { name: 'Node.js', icon: '🟢' },
+                { name: 'MongoDB', icon: '🍃' },
+                { name: 'Blockchain', icon: '⛓️' },
+                { name: 'AI/ML', icon: '🤖' },
+                { name: 'GSAP', icon: '🎬' },
+                { name: 'Tailwind', icon: '💨' },
+                { name: 'Vercel', icon: '▲' },
+                { name: 'Git', icon: '📝' },
+                { name: 'AWS', icon: '☁️' }
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  <div className="text-2xl mb-2">{tech.icon}</div>
+                  <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                    {tech.name}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
