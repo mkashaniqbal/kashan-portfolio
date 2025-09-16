@@ -562,33 +562,26 @@ export default function Home() {
                 featured: true
               },
               {
-                title: 'E-Commerce Platform',
-                description: 'Full-stack e-commerce solution with payment integration, admin dashboard, and real-time inventory management.',
-                tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+                title: 'AI-Powered Resume Analyzer',
+                description: 'Intelligent resume analysis platform using machine learning to provide comprehensive feedback and optimization suggestions.',
+                tech: ['React', 'Python', 'TensorFlow', 'NLP APIs'],
                 status: 'Live',
-                type: 'Full-Stack Application',
+                type: 'AI/ML Application',
                 featured: true
               },
               {
-                title: 'AI Chat Application',
-                description: 'Real-time messaging platform with AI-powered features, file sharing, and group management capabilities.',
-                tech: ['Next.js', 'Socket.io', 'OpenAI API', 'PostgreSQL'],
+                title: 'Smart Expense Tracker with Visual Insights',
+                description: 'Advanced expense tracking application with AI-powered categorization and comprehensive visual analytics.',
+                tech: ['Next.js', 'Chart.js', 'MongoDB', 'Machine Learning'],
                 status: 'Live',
-                type: 'AI Integration'
+                type: 'FinTech Application'
               },
               {
-                title: 'Task Management System',
-                description: 'Collaborative project management tool with drag-and-drop functionality and team analytics.',
-                tech: ['React', 'Express', 'MongoDB', 'Chart.js'],
+                title: 'Real-Time Project Management Board',
+                description: 'Collaborative project management platform with real-time updates, drag-and-drop functionality, and team analytics.',
+                tech: ['React', 'Socket.io', 'MongoDB', 'Chart.js'],
                 status: 'Live',
                 type: 'SaaS Application'
-              },
-              {
-                title: 'Blockchain Voting System',
-                description: 'Decentralized voting platform built with smart contracts ensuring transparency and security.',
-                tech: ['Solidity', 'Web3.js', 'React', 'IPFS'],
-                status: 'Development',
-                type: 'Blockchain'
               }
             ].map((project, index) => (
               <div
