@@ -654,7 +654,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Tech Stack Showcase */}
+          {/* Tech Stack Showcase - Automatic Logo Slider */}
           <div className="mt-20 pt-16 border-t border-white/10">
             <div className="text-center mb-12">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
@@ -665,31 +665,78 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[
-                { name: 'React', icon: '⚛️' },
-                { name: 'TypeScript', icon: '📘' },
-                { name: 'Next.js', icon: '▲' },
-                { name: 'Node.js', icon: '🟢' },
-                { name: 'MongoDB', icon: '🍃' },
-                { name: 'Blockchain', icon: '⛓️' },
-                { name: 'AI/ML', icon: '🤖' },
-                { name: 'GSAP', icon: '🎬' },
-                { name: 'Tailwind', icon: '💨' },
-                { name: 'Vercel', icon: '▲' },
-                { name: 'Git', icon: '📝' },
-                { name: 'AWS', icon: '☁️' }
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center"
-                >
-                  <div className="text-2xl mb-2">{tech.icon}</div>
-                  <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
-                    {tech.name}
+            {/* Automatic Logo Slider */}
+            <div className="relative overflow-hidden">
+              {/* Fade overlays for smooth appearance */}
+              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#0f0f23] via-[#0f0f23]/80 to-transparent z-10"></div>
+              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#0f0f23] via-[#0f0f23]/80 to-transparent z-10"></div>
+
+              {/* Slider Container */}
+              <div className="flex animate-infinite-scroll space-x-8 py-8">
+                {/* First set of logos */}
+                {[
+                  { name: 'React', icon: '⚛️', color: 'from-blue-400 to-cyan-400' },
+                  { name: 'TypeScript', icon: '📘', color: 'from-blue-600 to-blue-400' },
+                  { name: 'Next.js', icon: '▲', color: 'from-gray-400 to-white' },
+                  { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-400' },
+                  { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-green-500' },
+                  { name: 'Blockchain', icon: '⛓️', color: 'from-yellow-400 to-orange-500' },
+                  { name: 'AI/ML', icon: '🤖', color: 'from-purple-500 to-pink-500' },
+                  { name: 'GSAP', icon: '🎬', color: 'from-green-400 to-blue-500' },
+                  { name: 'Tailwind', icon: '💨', color: 'from-cyan-400 to-blue-500' },
+                  { name: 'Vercel', icon: '▲', color: 'from-gray-900 to-gray-700' },
+                  { name: 'Git', icon: '📝', color: 'from-orange-500 to-red-500' },
+                  { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-yellow-500' }
+                ].map((tech, index) => (
+                  <div
+                    key={`first-${index}`}
+                    className="flex-shrink-0 group relative"
+                  >
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 min-w-[120px] hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
+                      {/* Gradient background on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}></div>
+                      <div className="relative z-10">
+                        <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{tech.icon}</div>
+                        <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                          {tech.name}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+
+                {/* Duplicate set for seamless loop */}
+                {[
+                  { name: 'React', icon: '⚛️', color: 'from-blue-400 to-cyan-400' },
+                  { name: 'TypeScript', icon: '📘', color: 'from-blue-600 to-blue-400' },
+                  { name: 'Next.js', icon: '▲', color: 'from-gray-400 to-white' },
+                  { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-400' },
+                  { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-green-500' },
+                  { name: 'Blockchain', icon: '⛓️', color: 'from-yellow-400 to-orange-500' },
+                  { name: 'AI/ML', icon: '🤖', color: 'from-purple-500 to-pink-500' },
+                  { name: 'GSAP', icon: '🎬', color: 'from-green-400 to-blue-500' },
+                  { name: 'Tailwind', icon: '💨', color: 'from-cyan-400 to-blue-500' },
+                  { name: 'Vercel', icon: '▲', color: 'from-gray-900 to-gray-700' },
+                  { name: 'Git', icon: '📝', color: 'from-orange-500 to-red-500' },
+                  { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-yellow-500' }
+                ].map((tech, index) => (
+                  <div
+                    key={`second-${index}`}
+                    className="flex-shrink-0 group relative"
+                  >
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 min-w-[120px] hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center relative overflow-hidden">
+                      {/* Gradient background on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`}></div>
+                      <div className="relative z-10">
+                        <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{tech.icon}</div>
+                        <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                          {tech.name}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

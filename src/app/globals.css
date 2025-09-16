@@ -426,6 +426,15 @@
   }
 }
 
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Responsive typography */
 @media (max-width: 768px) {
   .text-display-1 {

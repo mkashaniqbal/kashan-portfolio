@@ -16,6 +16,7 @@ const config: Config = {
         'glow': 'glow 2s ease-in-out infinite alternate',
         'gradient-shift': 'gradient-shift 3s ease infinite',
         'shimmer': 'shimmer 2s infinite',
+        'infinite-scroll': 'infinite-scroll 20s linear infinite',
       },
       keyframes: {
         fadeIn: {
